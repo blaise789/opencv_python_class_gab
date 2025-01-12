@@ -4,7 +4,7 @@ import cv2
 image = cv2.imread('assignment-001-given.jpg')
 
 def add_text_with_background(
-    image, text, position, font, font_scale, font_thickness, text_color, bg_color, opacity, padding=10
+    image, text, position, font, font_scale, font_thickness, text_color, bg_color, opacity,padding
 ):
     img_cp = image.copy()
     text_size, baseline = cv2.getTextSize(text, font, font_scale, font_thickness)
@@ -24,14 +24,14 @@ def add_text_with_background(
 text = 'RAH972U'
 font = cv2.FONT_HERSHEY_SIMPLEX
 font_scale = 2.5
-font_thickness = 5
+font_thickness = 7
 text_color = (0, 255, 0) 
 bg_color = (0, 0, 0)  
-opacity = 0.5
-padding = 18 
+opacity = 0.3
+padding = 10
 
-large_rect_top_left = (900, 180) 
-text_x = large_rect_top_left[0]  
+large_rect_top_left = (900, 185) 
+text_x = large_rect_top_left[0]
 text_y = large_rect_top_left[1] - 30  
 add_text_with_background(
     image, text, (text_x, text_y), 
